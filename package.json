@@ -1,0 +1,19 @@
+{
+  "name": "dev",
+  "version": "1.0.0",
+  "description": "practice app ",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyj0522kl994/test1.git"
+  },
+  "author": "Yoojin Ha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyj0522kl994/test1/issues"
+  },
+  "homepage": "https://github.com/hyj0522kl994/test1#readme"
+}
