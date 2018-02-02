@@ -1,9 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title> hello world!</title>
-</head>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  <!--  <script src="index.js"></script> -->
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	</head>
+
 <body>
-  <h1>hello hello</h1>
-</body>
+
+	<script>
+	  const socket = new WebSocket("ws://localhost:1040");
+
+	  socket.onmessage = function(event) {
+	      var data = event.data;
+	      document.getElementById("storage").innerHTML +=data;
+	      document.getElementById("storage").innerHTML +="<br>";
+				           console.log(data);
+
+	  }
+	  socket.onopen = function() {
+	  }
+	  window.onload = function(){
+	  document.querySelector('button').onclick = function(){
+	    var text = document.getElementById('message').value;
+			socket.send(text);
+
+		}
+
+
+	}
+	</script>
+
+		<div class="logo">
+				<p align="center"><a href="#">KONG</a></p>
+		</div>
+
+
+<div class="middle-top">
+    <div class="container-fluid">
+
+              <div class="col-sm-2">
+                <div class ="leftside">
+                  <ul>
+                    <li><a href="#">다시 듣기/보기</a></li>
+                    <li><a href="#">전체 편성표</a></li>
+                    <li><a href="#">주파수 안내</a></li>
+                    <li><a href="#">팟캐스트</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">설정</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class= "col-sm-8">
+                  <div class= "center">
+	                    <h1 align="center" >Player</h1>
+
+                  </div>
+              </div>
+
+              <div class= "col-sm-2">
+                 <div class= "rightside">
+                      <h2>Chatting</h2>
+                    <!--  <form id="comment-form">
+                        <input type="text" id="comment-input" placeholder="코멘트"/>
+                        <input type="submit" value="입력"/>
+                      </form>
+                      <ul id="comments"></ul>-->
+
+											<textfield id="storage" cols:"30" rows:"100" > </textfield>
+
+											<div id="chat"></div>
+											<div id=box>
+											  <input id="message" class="message" type="text">
+											  <button>send</button>
+											</div>
+
+									</div>
+              </div>
+
+        </div>
+    </div>
+
+    <div class="middle-bottom">
+        <div class="container-fluid">
+                    <div class="col-lg-2" >
+                    </div>
+
+                    <div class="col-lg-2" >
+                      <h3 align="center">OverView</h3>
+
+                    </div>
+
+                    <div class="col-lg-2" >
+                      <h3 align="center">FeebBack</h3>
+
+                    </div>
+
+                    <div class="col-lg-2" >
+                      <h3 align="center">Libraries</h3>
+
+                    </div>
+                    <div class="col-lg-2" >
+                      <h3 align="center">Libraries</h3>
+
+                    </div>
+                    <div class="col-lg-2" >
+                      <h3 align="center">Libraries</h3>
+
+                    </div>
+
+             </div>
+      </div>
+	</body>
 </html>
