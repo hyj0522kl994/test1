@@ -1,0 +1,54 @@
+body {
+    font-size: 80%;
+
+    letter-spacing: 0.15em;
+
+}
+
+textarea {
+  resize: none;
+
+}
+.logo  {
+  border-bottom: 3px solid #4683AC;
+  height: 50px;
+}
+
+.logo p{
+  font-size: 40px;
+}
+.middle-top{
+  height: 350px;
+
+}
+
+.leftside {
+  width:200px;
+  position: fixed;
+
+}
+.leftside ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.leftside li{
+  padding:10px 5px;
+  border-bottom:1px solid #DDD;
+}
+.leftside li a{
+  color: #333;
+  text-decoration:none;
+}
+.leftside li a:hover{
+  color:#F00;
+  text-decoration: underline;
+}
+.center{
+
+}
+.rightside {
+  text-align: right;
+
+
+}

@@ -1,7 +1,7 @@
 {
   "name": "dev",
   "version": "1.0.0",
-  "description": "practice app ",
+  "description": "My first radio web app copied from KBS Kong",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -11,9 +11,19 @@
     "url": "git+https://github.com/hyj0522kl994/test1.git"
   },
   "author": "Yoojin Ha",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hyj0522kl994/test1/issues"
   },
-  "homepage": "https://github.com/hyj0522kl994/test1#readme"
+  "homepage": "https://github.com/hyj0522kl994/test1#readme",
+  "devDependencies": {
+    "electron": "^1.6.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "firebase": "^3.6.4",
+    "firechat": "^3.0.1",
+    "jquery": "^3.3.1",
+    "ws": "^4.0.0"
+  }
 }
